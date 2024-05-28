@@ -1,0 +1,2342 @@
+[[package]]
+name = "aiohttp"
+version = "3.9.5"
+description = "Async http client/server framework (asyncio)"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+aiosignal = ">=1.1.2"
+async-timeout = {version = ">=4.0,<5.0", markers = "python_version < \"3.11\""}
+attrs = ">=17.3.0"
+frozenlist = ">=1.1.1"
+multidict = ">=4.5,<7.0"
+yarl = ">=1.0,<2.0"
+
+[package.extras]
+speedups = ["brotlicffi", "brotli", "aiodns"]
+
+[[package]]
+name = "aiosignal"
+version = "1.3.1"
+description = "aiosignal: a list of registered asynchronous callbacks"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+frozenlist = ">=1.1.0"
+
+[[package]]
+name = "alembic"
+version = "1.13.1"
+description = "A database migration tool for SQLAlchemy."
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+importlib-metadata = {version = "*", markers = "python_version < \"3.9\""}
+importlib-resources = {version = "*", markers = "python_version < \"3.9\""}
+Mako = "*"
+SQLAlchemy = ">=1.3.0"
+typing-extensions = ">=4"
+
+[package.extras]
+tz = ["backports.zoneinfo"]
+
+[[package]]
+name = "anyio"
+version = "4.4.0"
+description = "High level compatibility layer for multiple asynchronous event loop implementations"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+exceptiongroup = {version = ">=1.0.2", markers = "python_version < \"3.11\""}
+idna = ">=2.8"
+sniffio = ">=1.1"
+typing-extensions = {version = ">=4.1", markers = "python_version < \"3.11\""}
+
+[package.extras]
+doc = ["packaging", "Sphinx (>=7)", "sphinx-rtd-theme", "sphinx-autodoc-typehints (>=1.2.0)"]
+test = ["anyio", "coverage[toml] (>=7)", "exceptiongroup (>=1.2.0)", "hypothesis (>=4.0)", "psutil (>=5.9)", "pytest (>=7.0)", "pytest-mock (>=3.6.1)", "trustme", "uvloop (>=0.17)"]
+trio = ["trio (>=0.23)"]
+
+[[package]]
+name = "apache-airflow"
+version = "2.9.1"
+description = "Programmatically author, schedule and monitor data pipelines"
+category = "main"
+optional = false
+python-versions = "<3.13,~=3.8"
+
+[package.dependencies]
+alembic = ">=1.13.1,<2.0"
+apache-airflow-providers-common-io = "*"
+apache-airflow-providers-common-sql = "*"
+apache-airflow-providers-fab = ">=1.0.2"
+apache-airflow-providers-ftp = "*"
+apache-airflow-providers-http = "*"
+apache-airflow-providers-imap = "*"
+apache-airflow-providers-smtp = "*"
+apache-airflow-providers-sqlite = "*"
+argcomplete = ">=1.10"
+asgiref = "*"
+attrs = ">=22.1.0"
+blinker = ">=1.6.2"
+colorlog = ">=4.0.2,<5.0"
+configupdater = ">=3.1.1"
+connexion = {version = ">=2.10.0,<3.0", extras = ["flask"]}
+cron-descriptor = ">=1.2.24"
+croniter = ">=2.0.2"
+cryptography = ">=39.0.0"
+deprecated = ">=1.2.13"
+dill = ">=0.2.2"
+flask = ">=2.2,<2.3"
+flask-caching = ">=1.5.0"
+flask-session = ">=0.4.0,<0.6"
+flask-wtf = ">=0.15"
+fsspec = ">=2023.10.0"
+google-re2 = ">=1.0"
+gunicorn = ">=20.1.0"
+httpx = "*"
+importlib_metadata = {version = ">=6.5", markers = "python_version < \"3.12\""}
+importlib_resources = {version = ">=5.2,<6.2.0 || >6.2.0,<6.3.0 || >6.3.0,<6.3.1 || >6.3.1", markers = "python_version < \"3.9\""}
+itsdangerous = ">=2.0"
+jinja2 = ">=3.0.0"
+jsonschema = ">=4.18.0"
+lazy-object-proxy = "*"
+linkify-it-py = ">=2.0.0"
+lockfile = ">=0.12.2"
+markdown-it-py = ">=2.1.0"
+markupsafe = ">=1.1.1"
+marshmallow-oneofschema = ">=2.0.1"
+mdit-py-plugins = ">=0.3.0"
+methodtools = ">=0.4.7"
+opentelemetry-api = ">=1.15.0"
+opentelemetry-exporter-otlp = "*"
+packaging = ">=14.0"
+pathspec = ">=0.9.0"
+pendulum = ">=2.1.2,<4.0"
+pluggy = ">=1.0"
+psutil = ">=4.2.0"
+pygments = ">=2.0.1"
+pyjwt = ">=2.0.0"
+python-daemon = ">=3.0.0"
+python-dateutil = ">=2.3"
+python-nvd3 = ">=0.15.0"
+python-slugify = ">=5.0"
+requests = ">=2.27.0,<3"
+rfc3339-validator = ">=0.1.4"
+rich = ">=12.4.4"
+rich-argparse = ">=1.0.0"
+setproctitle = ">=1.1.8"
+sqlalchemy = ">=1.4.36,<2.0"
+sqlalchemy-jsonfield = ">=1.0"
+tabulate = ">=0.7.5"
+tenacity = ">=6.2.0,<8.2.0 || >8.2.0"
+termcolor = ">=1.1.0"
+unicodecsv = ">=0.14.1"
+universal-pathlib = ">=0.2.2"
+werkzeug = ">=2.0,<3"
+
+[package.extras]
+aiobotocore = ["aiobotocore (>=2.7.0)"]
+async = ["eventlet (>=0.33.3)", "gevent (>=0.13)", "greenlet (>=0.4.9)"]
+apache-atlas = ["atlasclient (>=0.1.2)"]
+apache-webhdfs = ["hdfs[kerberos,avro,dataframe] (>=2.0.4)"]
+cgroups = ["cgroupspy (>=0.2.2)"]
+deprecated-api = ["requests (>=2.27.0,<3)"]
+github-enterprise = ["apache-airflow", "authlib (>=1.0.0)"]
+google-auth = ["apache-airflow", "authlib (>=1.0.0)"]
+graphviz = ["graphviz (>=0.12)"]
+kerberos = ["pykerberos (>=1.1.13)", "requests-kerberos (>=0.10.0)", "thrift-sasl (>=0.2.0)"]
+ldap = ["ldap3 (>=2.5.1)", "python-ldap"]
+leveldb = ["plyvel"]
+otel = ["opentelemetry-exporter-prometheus"]
+pandas = ["pandas (>=1.2.5,<2.2)"]
+password = ["bcrypt (>=2.0.0)", "flask-bcrypt (>=0.7.1)"]
+pydantic = ["pydantic (>=2.3.0)"]
+rabbitmq = ["amqp"]
+s3fs = ["s3fs (>=2023.10.0)"]
+saml = ["python3-saml (>=1.16.0)"]
+sentry = ["blinker (>=1.1)", "sentry-sdk (>=1.32.0,!=1.33.0)"]
+statsd = ["statsd (>=3.3.0)"]
+uv = ["uv (>=0.1.32)"]
+virtualenv = ["virtualenv"]
+all-dbs = ["apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow"]
+atlas = ["apache-airflow"]
+aws = ["apache-airflow"]
+azure = ["apache-airflow"]
+cassandra = ["apache-airflow"]
+druid = ["apache-airflow"]
+gcp = ["apache-airflow"]
+gcp-api = ["apache-airflow"]
+hdfs = ["apache-airflow"]
+hive = ["apache-airflow"]
+kubernetes = ["apache-airflow"]
+mssql = ["apache-airflow"]
+pinot = ["apache-airflow"]
+s3 = ["apache-airflow"]
+spark = ["apache-airflow"]
+webhdfs = ["apache-airflow"]
+winrm = ["apache-airflow"]
+airbyte = ["apache-airflow-providers-airbyte"]
+alibaba = ["apache-airflow-providers-alibaba"]
+amazon = ["apache-airflow-providers-amazon"]
+apache-beam = ["apache-airflow-providers-apache-beam"]
+apache-cassandra = ["apache-airflow-providers-apache-cassandra"]
+apache-drill = ["apache-airflow-providers-apache-drill"]
+apache-druid = ["apache-airflow-providers-apache-druid"]
+apache-flink = ["apache-airflow-providers-apache-flink"]
+apache-hdfs = ["apache-airflow-providers-apache-hdfs"]
+apache-hive = ["apache-airflow-providers-apache-hive"]
+apache-impala = ["apache-airflow-providers-apache-impala"]
+apache-kafka = ["apache-airflow-providers-apache-kafka"]
+apache-kylin = ["apache-airflow-providers-apache-kylin"]
+apache-livy = ["apache-airflow-providers-apache-livy"]
+apache-pig = ["apache-airflow-providers-apache-pig"]
+apache-pinot = ["apache-airflow-providers-apache-pinot"]
+apache-spark = ["apache-airflow-providers-apache-spark"]
+apprise = ["apache-airflow-providers-apprise"]
+arangodb = ["apache-airflow-providers-arangodb"]
+asana = ["apache-airflow-providers-asana"]
+atlassian-jira = ["apache-airflow-providers-atlassian-jira"]
+celery = ["apache-airflow-providers-celery"]
+cloudant = ["apache-airflow-providers-cloudant"]
+cncf-kubernetes = ["apache-airflow-providers-cncf-kubernetes"]
+cohere = ["apache-airflow-providers-cohere"]
+common-io = ["apache-airflow-providers-common-io"]
+common-sql = ["apache-airflow-providers-common-sql"]
+databricks = ["apache-airflow-providers-databricks"]
+datadog = ["apache-airflow-providers-datadog"]
+dbt-cloud = ["apache-airflow-providers-dbt-cloud"]
+dingding = ["apache-airflow-providers-dingding"]
+discord = ["apache-airflow-providers-discord"]
+docker = ["apache-airflow-providers-docker"]
+elasticsearch = ["apache-airflow-providers-elasticsearch"]
+exasol = ["apache-airflow-providers-exasol"]
+fab = ["apache-airflow-providers-fab"]
+facebook = ["apache-airflow-providers-facebook"]
+ftp = ["apache-airflow-providers-ftp"]
+github = ["apache-airflow-providers-github"]
+google = ["apache-airflow-providers-google"]
+grpc = ["apache-airflow-providers-grpc"]
+hashicorp = ["apache-airflow-providers-hashicorp"]
+http = ["apache-airflow-providers-http"]
+imap = ["apache-airflow-providers-imap"]
+influxdb = ["apache-airflow-providers-influxdb"]
+jdbc = ["apache-airflow-providers-jdbc"]
+jenkins = ["apache-airflow-providers-jenkins"]
+microsoft-azure = ["apache-airflow-providers-microsoft-azure"]
+microsoft-mssql = ["apache-airflow-providers-microsoft-mssql"]
+microsoft-psrp = ["apache-airflow-providers-microsoft-psrp"]
+microsoft-winrm = ["apache-airflow-providers-microsoft-winrm"]
+mongo = ["apache-airflow-providers-mongo"]
+mysql = ["apache-airflow-providers-mysql"]
+neo4j = ["apache-airflow-providers-neo4j"]
+odbc = ["apache-airflow-providers-odbc"]
+openai = ["apache-airflow-providers-openai"]
+openfaas = ["apache-airflow-providers-openfaas"]
+openlineage = ["apache-airflow-providers-openlineage"]
+opensearch = ["apache-airflow-providers-opensearch"]
+opsgenie = ["apache-airflow-providers-opsgenie"]
+oracle = ["apache-airflow-providers-oracle"]
+pagerduty = ["apache-airflow-providers-pagerduty"]
+papermill = ["apache-airflow-providers-papermill"]
+pgvector = ["apache-airflow-providers-pgvector"]
+pinecone = ["apache-airflow-providers-pinecone"]
+postgres = ["apache-airflow-providers-postgres"]
+presto = ["apache-airflow-providers-presto"]
+qdrant = ["apache-airflow-providers-qdrant"]
+redis = ["apache-airflow-providers-redis"]
+salesforce = ["apache-airflow-providers-salesforce"]
+samba = ["apache-airflow-providers-samba"]
+segment = ["apache-airflow-providers-segment"]
+sendgrid = ["apache-airflow-providers-sendgrid"]
+sftp = ["apache-airflow-providers-sftp"]
+singularity = ["apache-airflow-providers-singularity"]
+slack = ["apache-airflow-providers-slack"]
+smtp = ["apache-airflow-providers-smtp"]
+snowflake = ["apache-airflow-providers-snowflake"]
+sqlite = ["apache-airflow-providers-sqlite"]
+ssh = ["apache-airflow-providers-ssh"]
+tableau = ["apache-airflow-providers-tableau"]
+tabular = ["apache-airflow-providers-tabular"]
+telegram = ["apache-airflow-providers-telegram"]
+teradata = ["apache-airflow-providers-teradata"]
+trino = ["apache-airflow-providers-trino"]
+vertica = ["apache-airflow-providers-vertica"]
+weaviate = ["apache-airflow-providers-weaviate"]
+yandex = ["apache-airflow-providers-yandex"]
+zendesk = ["apache-airflow-providers-zendesk"]
+all-core = ["apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow"]
+all = ["apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow", "apache-airflow"]
+devel-ci = ["aiobotocore (>=2.7.0)", "aiofiles (>=23.2.0)", "aioresponses (>=0.7.6)", "amqp", "astroid (>=2.12.3,<3.0)", "atlasclient (>=0.1.2)", "authlib (>=1.0.0)", "backports-zoneinfo (>=0.2.1)", "bcrypt (>=2.0.0)", "beautifulsoup4 (>=4.7.1)", "black (>=23.12.0)", "blinker (>=1.1)", "blinker (>=1.7.0)", "cgroupspy (>=0.2.2)", "checksumdir (>=1.2.0)", "click (>=8.0)", "click (>=8.0,!=8.1.4,!=8.1.5)", "coverage (>=7.4.0)", "docutils (>=0.16,<0.17)", "duckdb (>=0.10.0)", "duckdb (>=0.9.0)", "eralchemy2 (>=1.3.8)", "eventlet (>=0.33.3)", "flask-bcrypt (>=0.7.1)", "gevent (>=0.13)", "gitpython (>=3.1.40)", "graphviz (>=0.12)", "greenlet (>=0.4.9)", "hatch (>=1.9.1)", "hdfs[kerberos,avro,dataframe] (>=2.0.4)", "ipdb (>=0.13.13)", "ldap3 (>=2.5.1)", "mypy (==1.9.0)", "opentelemetry-exporter-prometheus", "pandas (>=1.2.5,<2.2)", "pipdeptree (>=2.13.1)", "plyvel", "pre-commit (>=3.5.0)", "pydantic (>=2.3.0)", "pygithub (>=2.1.1)", "pykerberos (>=1.1.13)", "pytest-asyncio (>=0.23.3)", "pytest-cov (>=4.1.0)", "pytest-custom-exit-code (>=0.3.0)", "pytest-icdiff (>=0.9)", "pytest-instafail (>=0.5.0)", "pytest-mock (>=3.12.0)", "pytest-rerunfailures (>=13.0)", "pytest-timeouts (>=1.2.1)", "pytest-xdist (>=3.5.0)", "pytest (>=7.4.4,<8.0)", "python-ldap", "python3-saml (>=1.16.0)", "requests-kerberos (>=0.10.0)", "requests-mock (>=1.11.0)", "requests (>=2.27.0,<3)", "restructuredtext-lint (>=1.4.0)", "rich-click (>=1.7.0)", "ruff (==0.3.3)", "s3fs (>=2023.10.0)", "semver (>=3.0.2)", "sentry-sdk (>=1.32.0,!=1.33.0)", "sphinx-airflow-theme (>=0.0.12)", "sphinx-argparse (>=0.4.0)", "sphinx-autoapi (>=2.1.1)", "sphinx-copybutton (>=0.5.2)", "sphinx-design (>=0.5.0)", "sphinx-jinja (>=2.0.2)", "sphinx-rtd-theme (>=2.0.0)", "sphinx (>=5.3.0,<6.0.0)", "sphinxcontrib-applehelp (>=1.0.4)", "sphinxcontrib-devhelp (>=1.0.2)", "sphinxcontrib-htmlhelp (>=2.0.1)", "sphinxcontrib-httpdomain (>=1.8.1)", "sphinxcontrib-jquery (>=4.1)", "sphinxcontrib-jsmath (>=1.0.1)", "sphinxcontrib-qthelp (>=1.0.3)", "sphinxcontrib-redoc (>=1.6.0)", "sphinxcontrib-serializinghtml (==1.1.5)", "sphinxcontrib-spelling (>=8.0.0)", "statsd (>=3.3.0)", "thrift-sasl (>=0.2.0)", "time-machine (>=2.13.0)", "towncrier (>=23.11.0)", "twine (>=4.0.2)", "types-aiofiles", "types-certifi", "types-croniter", "types-deprecated", "types-docutils", "types-markdown", "types-paramiko", "types-protobuf", "types-pymysql", "types-python-dateutil", "types-python-slugify", "types-pytz", "types-pyyaml", "types-redis", "types-requests", "types-setuptools", "types-tabulate", "types-termcolor", "types-toml", "uv (>=0.1.32)", "virtualenv", "wheel (>=0.42.0)", "yamllint (>=1.33.0)"]
+
+[[package]]
+name = "apache-airflow-providers-common-io"
+version = "1.3.1"
+description = "Provider package apache-airflow-providers-common-io for Apache Airflow"
+category = "main"
+optional = false
+python-versions = "~=3.8"
+
+[package.dependencies]
+apache-airflow = ">=2.8.0"
+
+[package.extras]
+openlineage = ["apache-airflow-providers-openlineage"]
+
+[[package]]
+name = "apache-airflow-providers-common-sql"
+version = "1.13.0"
+description = "Provider package apache-airflow-providers-common-sql for Apache Airflow"
+category = "main"
+optional = false
+python-versions = "~=3.8"
+
+[package.dependencies]
+apache-airflow = ">=2.7.0"
+more-itertools = ">=9.0.0"
+sqlparse = ">=0.4.2"
+
+[package.extras]
+openlineage = ["apache-airflow-providers-openlineage"]
+pandas = ["pandas (>=1.2.5,<2.2)"]
+
+[[package]]
+name = "apache-airflow-providers-fab"
+version = "1.1.0"
+description = "Provider package apache-airflow-providers-fab for Apache Airflow"
+category = "main"
+optional = false
+python-versions = "~=3.8"
+
+[package.dependencies]
+apache-airflow = ">=2.9.0"
+flask = ">=2.2,<2.3"
+flask-appbuilder = "4.4.1"
+flask-login = ">=0.6.2"
+google-re2 = ">=1.0"
+
+[[package]]
+name = "apache-airflow-providers-ftp"
+version = "3.9.0"
+description = "Provider package apache-airflow-providers-ftp for Apache Airflow"
+category = "main"
+optional = false
+python-versions = "~=3.8"
+
+[package.dependencies]
+apache-airflow = ">=2.7.0"
+
+[package.extras]
+openlineage = ["apache-airflow-providers-openlineage"]
+
+[[package]]
+name = "apache-airflow-providers-http"
+version = "4.11.0"
+description = "Provider package apache-airflow-providers-http for Apache Airflow"
+category = "main"
+optional = false
+python-versions = "~=3.8"
+
+[package.dependencies]
+aiohttp = ">=3.9.2"
+apache-airflow = ">=2.7.0"
+asgiref = "*"
+requests = ">=2.27.0,<3"
+requests_toolbelt = "*"
+
+[[package]]
+name = "apache-airflow-providers-imap"
+version = "3.6.0"
+description = "Provider package apache-airflow-providers-imap for Apache Airflow"
+category = "main"
+optional = false
+python-versions = "~=3.8"
+
+[package.dependencies]
+apache-airflow = ">=2.7.0"
+
+[[package]]
+name = "apache-airflow-providers-smtp"
+version = "1.7.0"
+description = "Provider package apache-airflow-providers-smtp for Apache Airflow"
+category = "main"
+optional = false
+python-versions = "~=3.8"
+
+[package.dependencies]
+apache-airflow = ">=2.7.0"
+
+[[package]]
+name = "apache-airflow-providers-sqlite"
+version = "3.8.0"
+description = "Provider package apache-airflow-providers-sqlite for Apache Airflow"
+category = "main"
+optional = false
+python-versions = "~=3.8"
+
+[package.dependencies]
+apache-airflow = ">=2.7.0"
+apache-airflow-providers-common-sql = ">=1.3.1"
+
+[package.extras]
+common-sql = ["apache-airflow-providers-common-sql"]
+
+[[package]]
+name = "apispec"
+version = "6.6.1"
+description = "A pluggable API specification generator. Currently supports the OpenAPI Specification (f.k.a. the Swagger specification)."
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+packaging = ">=21.3"
+PyYAML = {version = ">=3.10", optional = true, markers = "extra == \"yaml\""}
+
+[package.extras]
+dev = ["apispec", "tox", "pre-commit (>=3.5,<4.0)"]
+docs = ["apispec", "pyyaml (==6.0.1)", "sphinx (==7.3.7)", "sphinx-issues (==4.1.0)", "sphinx-rtd-theme (==2.0.0)"]
+marshmallow = ["marshmallow (>=3.18.0)"]
+tests = ["apispec", "openapi-spec-validator (==0.7.1)", "pytest"]
+yaml = ["PyYAML (>=3.10)"]
+
+[[package]]
+name = "argcomplete"
+version = "3.3.0"
+description = "Bash tab completion for argparse"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.extras]
+test = ["coverage", "pexpect", "wheel", "ruff", "mypy"]
+
+[[package]]
+name = "asgiref"
+version = "3.8.1"
+description = "ASGI specs, helper code, and adapters"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+typing-extensions = {version = ">=4", markers = "python_version < \"3.11\""}
+
+[package.extras]
+tests = ["pytest", "pytest-asyncio", "mypy (>=0.800)"]
+
+[[package]]
+name = "async-timeout"
+version = "4.0.3"
+description = "Timeout context manager for asyncio programs"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
+name = "attrs"
+version = "23.2.0"
+description = "Classes Without Boilerplate"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+cov = ["attrs", "coverage[toml] (>=5.3)"]
+dev = ["attrs", "pre-commit"]
+docs = ["furo", "myst-parser", "sphinx", "sphinx-notfound-page", "sphinxcontrib-towncrier", "towncrier", "zope-interface"]
+tests = ["attrs", "zope-interface"]
+tests-mypy = ["mypy (>=1.6)", "pytest-mypy-plugins"]
+tests-no-zope = ["attrs", "cloudpickle", "hypothesis", "pympler", "pytest-xdist", "pytest (>=4.3.0)"]
+
+[[package]]
+name = "babel"
+version = "2.15.0"
+description = "Internationalization utilities"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+pytz = {version = ">=2015.7", markers = "python_version < \"3.9\""}
+
+[package.extras]
+dev = ["pytest (>=6.0)", "pytest-cov", "freezegun (>=1.0,<2.0)"]
+
+[[package]]
+name = "backports.zoneinfo"
+version = "0.2.1"
+description = "Backport of the standard library zoneinfo module"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.extras]
+tzdata = ["tzdata"]
+
+[[package]]
+name = "black"
+version = "24.4.2"
+description = "The uncompromising code formatter."
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+click = ">=8.0.0"
+mypy-extensions = ">=0.4.3"
+packaging = ">=22.0"
+pathspec = ">=0.9.0"
+platformdirs = ">=2"
+tomli = {version = ">=1.1.0", markers = "python_version < \"3.11\""}
+typing-extensions = {version = ">=4.0.1", markers = "python_version < \"3.11\""}
+
+[package.extras]
+colorama = ["colorama (>=0.4.3)"]
+d = ["aiohttp (>=3.7.4,!=3.9.0)", "aiohttp (>=3.7.4)"]
+jupyter = ["ipython (>=7.8.0)", "tokenize-rt (>=3.2.0)"]
+uvloop = ["uvloop (>=0.15.2)"]
+
+[[package]]
+name = "blinker"
+version = "1.8.2"
+description = "Fast, simple object-to-object and broadcast signaling"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[[package]]
+name = "boto3"
+version = "1.34.113"
+description = "The AWS SDK for Python"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+botocore = ">=1.34.113,<1.35.0"
+jmespath = ">=0.7.1,<2.0.0"
+s3transfer = ">=0.10.0,<0.11.0"
+
+[package.extras]
+crt = ["botocore[crt] (>=1.21.0,<2.0a0)"]
+
+[[package]]
+name = "botocore"
+version = "1.34.113"
+description = "Low-level, data-driven core of boto 3."
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+jmespath = ">=0.7.1,<2.0.0"
+python-dateutil = ">=2.1,<3.0.0"
+urllib3 = [
+    {version = ">=1.25.4,<1.27", markers = "python_version < \"3.10\""},
+    {version = ">=1.25.4,<2.2.0 || >2.2.0,<3", markers = "python_version >= \"3.10\""},
+]
+
+[package.extras]
+crt = ["awscrt (==0.20.9)"]
+
+[[package]]
+name = "cachelib"
+version = "0.9.0"
+description = "A collection of cache libraries in the same API interface."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
+name = "certifi"
+version = "2024.2.2"
+description = "Python package for providing Mozilla's CA Bundle."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[[package]]
+name = "cffi"
+version = "1.16.0"
+description = "Foreign Function Interface for Python calling C code."
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+pycparser = "*"
+
+[[package]]
+name = "charset-normalizer"
+version = "3.3.2"
+description = "The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet."
+category = "main"
+optional = false
+python-versions = ">=3.7.0"
+
+[[package]]
+name = "click"
+version = "8.1.7"
+description = "Composable command line interface toolkit"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+colorama = {version = "*", markers = "platform_system == \"Windows\""}
+
+[[package]]
+name = "clickclick"
+version = "20.10.2"
+description = "Click utility functions"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+click = ">=4.0"
+PyYAML = ">=3.11"
+
+[[package]]
+name = "colorama"
+version = "0.4.6"
+description = "Cross-platform colored terminal text."
+category = "main"
+optional = false
+python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,!=3.6.*,>=2.7"
+
+[[package]]
+name = "colorlog"
+version = "4.8.0"
+description = "Log formatting with colors!"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+colorama = {version = "*", markers = "sys_platform == \"win32\""}
+
+[[package]]
+name = "configupdater"
+version = "3.2"
+description = "Parser like ConfigParser but for updating configuration files"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.extras]
+testing = ["sphinx", "flake8", "pytest", "pytest-cov", "pytest-xdist", "pytest-randomly"]
+
+[[package]]
+name = "connexion"
+version = "2.14.2"
+description = "Connexion - API first applications with OpenAPI/Swagger and Flask"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+clickclick = ">=1.2,<21"
+flask = ">=1.0.4,<2.3"
+inflection = ">=0.3.1,<0.6"
+itsdangerous = ">=0.24"
+jsonschema = ">=2.5.1,<5"
+packaging = ">=20"
+PyYAML = ">=5.1,<7"
+requests = ">=2.9.1,<3"
+werkzeug = ">=1.0,<2.3"
+
+[package.extras]
+aiohttp = ["aiohttp (>=2.3.10,<4)", "aiohttp-jinja2 (>=0.14.0,<2)", "MarkupSafe (>=0.23)"]
+docs = ["sphinx-autoapi (==1.8.1)"]
+flask = ["flask (>=1.0.4,<2.3)", "itsdangerous (>=0.24)"]
+swagger-ui = ["swagger-ui-bundle (>=0.0.2,<0.1)"]
+tests = ["decorator (>=5,<6)", "pytest (>=6,<7)", "pytest-cov (>=2,<3)", "testfixtures (>=6,<7)", "flask (>=1.0.4,<2.3)", "itsdangerous (>=0.24)", "swagger-ui-bundle (>=0.0.2,<0.1)", "aiohttp (>=2.3.10,<4)", "aiohttp-jinja2 (>=0.14.0,<2)", "MarkupSafe (>=0.23)", "pytest-aiohttp", "aiohttp-remotes"]
+
+[[package]]
+name = "cron-descriptor"
+version = "1.4.3"
+description = "A Python library that converts cron expressions into human readable strings."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.extras]
+dev = ["polib"]
+
+[[package]]
+name = "croniter"
+version = "2.0.5"
+description = "croniter provides iteration for datetime object with cron like format"
+category = "main"
+optional = false
+python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,>=2.6"
+
+[package.dependencies]
+python-dateutil = "*"
+pytz = ">2021.1"
+
+[[package]]
+name = "cryptography"
+version = "42.0.7"
+description = "cryptography is a package which provides cryptographic recipes and primitives to Python developers."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+cffi = {version = ">=1.12", markers = "platform_python_implementation != \"PyPy\""}
+
+[package.extras]
+docs = ["sphinx (>=5.3.0)", "sphinx-rtd-theme (>=1.1.1)"]
+docstest = ["pyenchant (>=1.6.11)", "readme-renderer", "sphinxcontrib-spelling (>=4.0.1)"]
+nox = ["nox"]
+pep8test = ["ruff", "mypy", "check-sdist", "click"]
+sdist = ["build"]
+ssh = ["bcrypt (>=3.1.5)"]
+test = ["pytest (>=6.2.0)", "pytest-benchmark", "pytest-cov", "pytest-xdist", "pretend", "certifi"]
+test-randomorder = ["pytest-randomly"]
+
+[[package]]
+name = "deprecated"
+version = "1.2.14"
+description = "Python @deprecated decorator to deprecate old python classes, functions or methods."
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[package.dependencies]
+wrapt = ">=1.10,<2"
+
+[package.extras]
+dev = ["tox", "pytest", "pytest-cov", "bump2version (<1)", "sphinx (<2)"]
+
+[[package]]
+name = "dill"
+version = "0.3.8"
+description = "serialize all of Python"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.extras]
+graph = ["objgraph (>=1.7.2)"]
+profile = ["gprof2dot (>=2022.7.29)"]
+
+[[package]]
+name = "dnspython"
+version = "2.6.1"
+description = "DNS toolkit"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.extras]
+dev = ["black (>=23.1.0)", "coverage (>=7.0)", "flake8 (>=7)", "mypy (>=1.8)", "pylint (>=3)", "pytest-cov (>=4.1.0)", "pytest (>=7.4)", "sphinx (>=7.2.0)", "twine (>=4.0.0)", "wheel (>=0.42.0)"]
+dnssec = ["cryptography (>=41)"]
+doh = ["h2 (>=4.1.0)", "httpcore (>=1.0.0)", "httpx (>=0.26.0)"]
+doq = ["aioquic (>=0.9.25)"]
+idna = ["idna (>=3.6)"]
+trio = ["trio (>=0.23)"]
+wmi = ["wmi (>=1.5.1)"]
+
+[[package]]
+name = "docutils"
+version = "0.20.1"
+description = "Docutils -- Python Documentation Utilities"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
+name = "email-validator"
+version = "2.1.1"
+description = "A robust email address syntax and deliverability validation library."
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+dnspython = ">=2.0.0"
+idna = ">=2.0.0"
+
+[[package]]
+name = "exceptiongroup"
+version = "1.2.1"
+description = "Backport of PEP 654 (exception groups)"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+test = ["pytest (>=6)"]
+
+[[package]]
+name = "flask"
+version = "2.2.5"
+description = "A simple framework for building complex web applications."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+click = ">=8.0"
+importlib-metadata = {version = ">=3.6.0", markers = "python_version < \"3.10\""}
+itsdangerous = ">=2.0"
+Jinja2 = ">=3.0"
+Werkzeug = ">=2.2.2"
+
+[package.extras]
+async = ["asgiref (>=3.2)"]
+dotenv = ["python-dotenv"]
+
+[[package]]
+name = "flask-appbuilder"
+version = "4.4.1"
+description = "Simple and rapid application development framework, built on top of Flask. includes detailed security, auto CRUD generation for your models, google charts and much more."
+category = "main"
+optional = false
+python-versions = "~=3.7"
+
+[package.dependencies]
+apispec = {version = ">=6.0.0,<7", extras = ["yaml"]}
+click = ">=8,<9"
+colorama = ">=0.3.9,<1"
+email-validator = ">=1.0.5"
+Flask = ">=2,<3.0.0"
+Flask-Babel = ">=1,<3"
+Flask-JWT-Extended = ">=4.0.0,<5.0.0"
+Flask-Limiter = ">3,<4"
+Flask-Login = ">=0.3,<0.7"
+Flask-SQLAlchemy = ">=2.4,<3"
+Flask-WTF = ">=0.14.2,<2"
+jsonschema = ">=3,<5"
+marshmallow = ">=3.18.0,<4"
+marshmallow-sqlalchemy = ">=0.22.0,<0.29.0"
+prison = ">=0.2.1,<1.0.0"
+PyJWT = ">=2.0.0,<3.0.0"
+python-dateutil = ">=2.3,<3"
+SQLAlchemy = "<1.5"
+sqlalchemy-utils = ">=0.32.21,<1"
+werkzeug = "<4"
+WTForms = "<4"
+
+[package.extras]
+jmespath = ["jmespath (>=0.9.5)"]
+oauth = ["Authlib (>=0.14,<2.0.0)"]
+openid = ["Flask-OpenID (>=1.2.5,<2)"]
+talisman = ["flask-talisman (>=1.0.0,<2.0)"]
+
+[[package]]
+name = "flask-babel"
+version = "2.0.0"
+description = "Adds i18n/l10n support to Flask applications"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+Babel = ">=2.3"
+Flask = "*"
+Jinja2 = ">=2.5"
+pytz = "*"
+
+[package.extras]
+dev = ["pytest", "pytest-mock", "bumpversion", "ghp-import", "sphinx", "pallets-sphinx-themes"]
+
+[[package]]
+name = "flask-caching"
+version = "2.3.0"
+description = "Adds caching support to Flask applications."
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+cachelib = ">=0.9.0,<0.10.0"
+Flask = "*"
+
+[[package]]
+name = "flask-jwt-extended"
+version = "4.6.0"
+description = "Extended JWT integration with Flask"
+category = "main"
+optional = false
+python-versions = ">=3.7,<4"
+
+[package.dependencies]
+Flask = ">=2.0,<4.0"
+PyJWT = ">=2.0,<3.0"
+Werkzeug = ">=0.14"
+
+[package.extras]
+asymmetric_crypto = ["cryptography (>=3.3.1)"]
+
+[[package]]
+name = "flask-limiter"
+version = "3.7.0"
+description = "Rate limiting for flask applications"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+Flask = ">=2"
+limits = ">=2.8"
+ordered-set = ">4,<5"
+rich = ">=12,<14"
+typing-extensions = ">=4"
+
+[package.extras]
+memcached = ["limits"]
+mongodb = ["limits"]
+redis = ["limits"]
+
+[[package]]
+name = "flask-login"
+version = "0.6.3"
+description = "User authentication and session management for Flask."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+Flask = ">=1.0.4"
+Werkzeug = ">=1.0.1"
+
+[[package]]
+name = "flask-session"
+version = "0.5.0"
+description = "Server-side session support for Flask"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+cachelib = "*"
+flask = ">=2.2"
+
+[[package]]
+name = "flask-sqlalchemy"
+version = "2.5.1"
+description = "Adds SQLAlchemy support to your Flask application."
+category = "main"
+optional = false
+python-versions = ">= 2.7, != 3.0.*, != 3.1.*, != 3.2.*, != 3.3.*"
+
+[package.dependencies]
+Flask = ">=0.10"
+SQLAlchemy = ">=0.8.0"
+
+[[package]]
+name = "flask-wtf"
+version = "1.2.1"
+description = "Form rendering, validation, and CSRF protection for Flask with WTForms."
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+flask = "*"
+itsdangerous = "*"
+wtforms = "*"
+
+[package.extras]
+email = ["email-validator"]
+
+[[package]]
+name = "frozenlist"
+version = "1.4.1"
+description = "A list-like structure which implements collections.abc.MutableSequence"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[[package]]
+name = "fsspec"
+version = "2024.5.0"
+description = "File-system specification"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.extras]
+abfs = ["adlfs"]
+adl = ["adlfs"]
+arrow = ["pyarrow (>=1)"]
+dask = ["dask", "distributed"]
+dev = ["pre-commit", "ruff"]
+dropbox = ["dropbox", "dropboxdrivefs", "requests"]
+full = ["adlfs", "aiohttp (!=4.0.0a0,!=4.0.0a1)", "dask", "distributed", "dropbox", "dropboxdrivefs", "fusepy", "gcsfs", "libarchive-c", "ocifs", "panel", "paramiko", "pyarrow (>=1)", "pygit2", "requests", "s3fs", "smbprotocol", "tqdm"]
+fuse = ["fusepy"]
+gcs = ["gcsfs"]
+git = ["pygit2"]
+github = ["requests"]
+gs = ["gcsfs"]
+gui = ["panel"]
+hdfs = ["pyarrow (>=1)"]
+http = ["aiohttp (!=4.0.0a0,!=4.0.0a1)"]
+libarchive = ["libarchive-c"]
+oci = ["ocifs"]
+s3 = ["s3fs"]
+sftp = ["paramiko"]
+smb = ["smbprotocol"]
+ssh = ["paramiko"]
+test = ["aiohttp (!=4.0.0a0,!=4.0.0a1)", "numpy", "pytest", "pytest-asyncio (!=0.22.0)", "pytest-benchmark", "pytest-cov", "pytest-mock", "pytest-recording", "pytest-rerunfailures", "requests"]
+test-downstream = ["aiobotocore (>=2.5.4,<3.0.0)", "dask-expr", "dask", "moto[server] (>4,<5)", "pytest-timeout", "xarray"]
+test-full = ["adlfs", "aiohttp (!=4.0.0a0,!=4.0.0a1)", "cloudpickle", "dask", "distributed", "dropbox", "dropboxdrivefs", "fastparquet", "fusepy", "gcsfs", "jinja2", "kerchunk", "libarchive-c", "lz4", "notebook", "numpy", "ocifs", "pandas", "panel", "paramiko", "pyarrow", "pyarrow (>=1)", "pyftpdlib", "pygit2", "pytest", "pytest-asyncio (!=0.22.0)", "pytest-benchmark", "pytest-cov", "pytest-mock", "pytest-recording", "pytest-rerunfailures", "python-snappy", "requests", "smbprotocol", "tqdm", "urllib3", "zarr", "zstandard"]
+tqdm = ["tqdm"]
+
+[[package]]
+name = "google-re2"
+version = "1.1.20240501"
+description = "RE2 Python bindings"
+category = "main"
+optional = false
+python-versions = "~=3.8"
+
+[[package]]
+name = "googleapis-common-protos"
+version = "1.63.0"
+description = "Common protobufs used in Google APIs"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+protobuf = ">=3.19.5,<3.20.0 || >3.20.0,<3.20.1 || >3.20.1,<4.21.1 || >4.21.1,<4.21.2 || >4.21.2,<4.21.3 || >4.21.3,<4.21.4 || >4.21.4,<4.21.5 || >4.21.5,<5.0.0.dev0"
+
+[package.extras]
+grpc = ["grpcio (>=1.44.0,<2.0.0.dev0)"]
+
+[[package]]
+name = "greenlet"
+version = "3.0.3"
+description = "Lightweight in-process concurrent programming"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+docs = ["sphinx", "furo"]
+test = ["objgraph", "psutil"]
+
+[[package]]
+name = "grpcio"
+version = "1.64.0"
+description = "HTTP/2-based RPC framework"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.extras]
+protobuf = ["grpcio-tools (>=1.64.0)"]
+
+[[package]]
+name = "gunicorn"
+version = "22.0.0"
+description = "WSGI HTTP Server for UNIX"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+packaging = "*"
+
+[package.extras]
+eventlet = ["eventlet (>=0.24.1,!=0.36.0)"]
+gevent = ["gevent (>=1.4.0)"]
+setproctitle = ["setproctitle"]
+testing = ["gevent", "eventlet", "coverage", "pytest", "pytest-cov"]
+tornado = ["tornado (>=0.2)"]
+
+[[package]]
+name = "h11"
+version = "0.14.0"
+description = "A pure-Python, bring-your-own-I/O implementation of HTTP/1.1"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
+name = "httpcore"
+version = "1.0.5"
+description = "A minimal low-level HTTP client."
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+certifi = "*"
+h11 = ">=0.13,<0.15"
+
+[package.extras]
+asyncio = ["anyio (>=4.0,<5.0)"]
+http2 = ["h2 (>=3,<5)"]
+socks = ["socksio (>=1.0.0,<2.0.0)"]
+trio = ["trio (>=0.22.0,<0.26.0)"]
+
+[[package]]
+name = "httpx"
+version = "0.27.0"
+description = "The next generation HTTP client."
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+anyio = "*"
+certifi = "*"
+httpcore = ">=1.0.0,<2.0.0"
+idna = "*"
+sniffio = "*"
+
+[package.extras]
+brotli = ["brotli", "brotlicffi"]
+cli = ["click (>=8.0.0,<9.0.0)", "pygments (>=2.0.0,<3.0.0)", "rich (>=10,<14)"]
+http2 = ["h2 (>=3,<5)"]
+socks = ["socksio (>=1.0.0,<2.0.0)"]
+
+[[package]]
+name = "idna"
+version = "3.7"
+description = "Internationalized Domain Names in Applications (IDNA)"
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
+[[package]]
+name = "importlib-metadata"
+version = "7.0.0"
+description = "Read metadata from Python packages"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+zipp = ">=0.5"
+
+[package.extras]
+docs = ["sphinx (>=3.5)", "sphinx (<7.2.5)", "jaraco.packaging (>=9.3)", "rst.linker (>=1.9)", "furo", "sphinx-lint", "jaraco.tidelift (>=1.4)"]
+perf = ["ipython"]
+testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=2.2)", "pytest-ruff", "packaging", "pyfakefs", "flufl.flake8", "pytest-perf (>=0.9.2)", "pytest-black (>=0.3.7)", "pytest-mypy (>=0.9.1)", "importlib-resources (>=1.3)"]
+
+[[package]]
+name = "importlib-resources"
+version = "6.4.0"
+description = "Read resources from Python packages"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+zipp = {version = ">=3.1.0", markers = "python_version < \"3.10\""}
+
+[package.extras]
+docs = ["sphinx (>=3.5)", "sphinx (<7.2.5)", "jaraco.packaging (>=9.3)", "rst.linker (>=1.9)", "furo", "sphinx-lint", "jaraco.tidelift (>=1.4)"]
+testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=2.2)", "pytest-ruff (>=0.2.1)", "zipp (>=3.17)", "jaraco.test (>=5.4)", "pytest-mypy"]
+
+[[package]]
+name = "inflection"
+version = "0.5.1"
+description = "A port of Ruby on Rails inflector to Python"
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
+[[package]]
+name = "itsdangerous"
+version = "2.2.0"
+description = "Safely pass data to untrusted environments and back."
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[[package]]
+name = "jinja2"
+version = "3.1.4"
+description = "A very fast and expressive template engine."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+MarkupSafe = ">=2.0"
+
+[package.extras]
+i18n = ["Babel (>=2.7)"]
+
+[[package]]
+name = "jmespath"
+version = "1.0.1"
+description = "JSON Matching Expressions"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
+name = "jsonschema"
+version = "4.22.0"
+description = "An implementation of JSON Schema validation for Python"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+attrs = ">=22.2.0"
+importlib-resources = {version = ">=1.4.0", markers = "python_version < \"3.9\""}
+jsonschema-specifications = ">=2023.03.6"
+pkgutil-resolve-name = {version = ">=1.3.10", markers = "python_version < \"3.9\""}
+referencing = ">=0.28.4"
+rpds-py = ">=0.7.1"
+
+[package.extras]
+format = ["fqdn", "idna", "isoduration", "jsonpointer (>1.13)", "rfc3339-validator", "rfc3987", "uri-template", "webcolors (>=1.11)"]
+format-nongpl = ["fqdn", "idna", "isoduration", "jsonpointer (>1.13)", "rfc3339-validator", "rfc3986-validator (>0.1.0)", "uri-template", "webcolors (>=1.11)"]
+
+[[package]]
+name = "jsonschema-specifications"
+version = "2023.12.1"
+description = "The JSON Schema meta-schemas and vocabularies, exposed as a Registry"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+importlib-resources = {version = ">=1.4.0", markers = "python_version < \"3.9\""}
+referencing = ">=0.31.0"
+
+[[package]]
+name = "lazy-object-proxy"
+version = "1.10.0"
+description = "A fast and thorough lazy object proxy."
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[[package]]
+name = "limits"
+version = "3.12.0"
+description = "Rate limiting utilities"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+deprecated = ">=1.2"
+importlib-resources = ">=1.3"
+packaging = ">=21,<25"
+typing-extensions = "*"
+
+[package.extras]
+all = ["redis (>3,!=4.5.2,!=4.5.3,<6.0.0)", "redis (>=4.2.0,!=4.5.2,!=4.5.3)", "pymemcache (>3,<5.0.0)", "pymongo (>4.1,<5)", "etcd3", "coredis (>=3.4.0,<5)", "motor (>=3,<4)", "aetcd", "emcache (>=0.6.1)", "emcache (>=1)"]
+async-etcd = ["aetcd"]
+async-memcached = ["emcache (>=0.6.1)", "emcache (>=1)"]
+async-mongodb = ["motor (>=3,<4)"]
+async-redis = ["coredis (>=3.4.0,<5)"]
+etcd = ["etcd3"]
+memcached = ["pymemcache (>3,<5.0.0)"]
+mongodb = ["pymongo (>4.1,<5)"]
+redis = ["redis (>3,!=4.5.2,!=4.5.3,<6.0.0)"]
+rediscluster = ["redis (>=4.2.0,!=4.5.2,!=4.5.3)"]
+
+[[package]]
+name = "linkify-it-py"
+version = "2.0.3"
+description = "Links recognition library with FULL unicode support."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+uc-micro-py = "*"
+
+[package.extras]
+benchmark = ["pytest", "pytest-benchmark"]
+dev = ["pre-commit", "isort", "flake8", "black", "pyproject-flake8"]
+doc = ["sphinx", "sphinx-book-theme", "myst-parser"]
+test = ["pytest", "coverage", "pytest-cov"]
+
+[[package]]
+name = "lockfile"
+version = "0.12.2"
+description = "Platform-independent file locking module"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "mako"
+version = "1.3.5"
+description = "A super-fast templating language that borrows the best ideas from the existing templating languages."
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+MarkupSafe = ">=0.9.2"
+
+[package.extras]
+testing = ["pytest"]
+babel = ["babel"]
+lingua = ["lingua"]
+
+[[package]]
+name = "markdown-it-py"
+version = "3.0.0"
+description = "Python port of markdown-it. Markdown parsing, done right!"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+mdurl = ">=0.1,<1.0"
+
+[package.extras]
+benchmarking = ["psutil", "pytest", "pytest-benchmark"]
+code_style = ["pre-commit (>=3.0,<4.0)"]
+compare = ["commonmark (>=0.9,<1.0)", "markdown (>=3.4,<4.0)", "mistletoe (>=1.0,<2.0)", "mistune (>=2.0,<3.0)", "panflute (>=2.3,<3.0)"]
+linkify = ["linkify-it-py (>=1,<3)"]
+plugins = ["mdit-py-plugins"]
+profiling = ["gprof2dot"]
+rtd = ["mdit-py-plugins", "myst-parser", "pyyaml", "sphinx", "sphinx-copybutton", "sphinx-design", "sphinx-book-theme", "jupyter-sphinx"]
+testing = ["coverage", "pytest", "pytest-cov", "pytest-regressions"]
+
+[[package]]
+name = "markupsafe"
+version = "2.1.5"
+description = "Safely add untrusted strings to HTML/XML markup."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
+name = "marshmallow"
+version = "3.21.2"
+description = "A lightweight library for converting complex datatypes to and from native Python datatypes."
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+packaging = ">=17.0"
+
+[package.extras]
+dev = ["marshmallow", "tox", "pre-commit (>=3.5,<4.0)"]
+docs = ["sphinx (==7.3.7)", "sphinx-issues (==4.1.0)", "alabaster (==0.7.16)", "sphinx-version-warning (==1.1.2)", "autodocsumm (==0.2.12)"]
+tests = ["pytest", "pytz", "simplejson"]
+
+[[package]]
+name = "marshmallow-oneofschema"
+version = "3.1.1"
+description = "marshmallow multiplexing schema"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+marshmallow = ">=3.0.0,<4.0.0"
+
+[package.extras]
+dev = ["marshmallow-oneofschema", "tox", "pre-commit (>=3.5,<4.0)"]
+tests = ["pytest"]
+
+[[package]]
+name = "marshmallow-sqlalchemy"
+version = "0.28.2"
+description = "SQLAlchemy integration with the marshmallow (de)serialization library"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+marshmallow = ">=3.0.0"
+packaging = ">=21.3"
+SQLAlchemy = ">=1.3.0,<2.0"
+
+[package.extras]
+dev = ["pytest", "pytest-lazy-fixture (>=0.6.2)", "flake8 (==6.0.0)", "flake8-bugbear (==23.2.13)", "pre-commit (==3.1.0)", "tox"]
+docs = ["sphinx (==6.1.3)", "alabaster (==0.7.13)", "sphinx-issues (==3.0.1)"]
+lint = ["flake8 (==6.0.0)", "flake8-bugbear (==23.2.13)", "pre-commit (==3.1.0)"]
+tests = ["pytest", "pytest-lazy-fixture (>=0.6.2)"]
+
+[[package]]
+name = "mdit-py-plugins"
+version = "0.4.1"
+description = "Collection of plugins for markdown-it-py"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+markdown-it-py = ">=1.0.0,<4.0.0"
+
+[package.extras]
+code-style = ["pre-commit"]
+rtd = ["myst-parser", "sphinx-book-theme"]
+testing = ["coverage", "pytest", "pytest-cov", "pytest-regressions"]
+
+[[package]]
+name = "mdurl"
+version = "0.1.2"
+description = "Markdown URL utilities"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
+name = "methodtools"
+version = "0.4.7"
+description = "Expand standard functools to methods"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+wirerope = ">=0.4.7"
+
+[package.extras]
+doc = ["sphinx"]
+test = ["pytest (>=4.6.7)", "pytest-cov (>=2.6.1)", "functools32 (>=3.2.3-2)"]
+
+[[package]]
+name = "more-itertools"
+version = "10.2.0"
+description = "More routines for operating on iterables, beyond itertools"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[[package]]
+name = "multidict"
+version = "6.0.5"
+description = "multidict implementation"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
+name = "mypy-extensions"
+version = "1.0.0"
+description = "Type system extensions for programs checked with the mypy type checker."
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
+[[package]]
+name = "opentelemetry-api"
+version = "1.24.0"
+description = "OpenTelemetry Python API"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+deprecated = ">=1.2.6"
+importlib-metadata = ">=6.0,<=7.0"
+
+[[package]]
+name = "opentelemetry-exporter-otlp"
+version = "1.24.0"
+description = "OpenTelemetry Collector Exporters"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+opentelemetry-exporter-otlp-proto-grpc = "1.24.0"
+opentelemetry-exporter-otlp-proto-http = "1.24.0"
+
+[[package]]
+name = "opentelemetry-exporter-otlp-proto-common"
+version = "1.24.0"
+description = "OpenTelemetry Protobuf encoding"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+opentelemetry-proto = "1.24.0"
+
+[[package]]
+name = "opentelemetry-exporter-otlp-proto-grpc"
+version = "1.24.0"
+description = "OpenTelemetry Collector Protobuf over gRPC Exporter"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+deprecated = ">=1.2.6"
+googleapis-common-protos = ">=1.52,<2.0"
+grpcio = ">=1.0.0,<2.0.0"
+opentelemetry-api = ">=1.15,<2.0"
+opentelemetry-exporter-otlp-proto-common = "1.24.0"
+opentelemetry-proto = "1.24.0"
+opentelemetry-sdk = ">=1.24.0,<1.25.0"
+
+[package.extras]
+test = ["pytest-grpc"]
+
+[[package]]
+name = "opentelemetry-exporter-otlp-proto-http"
+version = "1.24.0"
+description = "OpenTelemetry Collector Protobuf over HTTP Exporter"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+deprecated = ">=1.2.6"
+googleapis-common-protos = ">=1.52,<2.0"
+opentelemetry-api = ">=1.15,<2.0"
+opentelemetry-exporter-otlp-proto-common = "1.24.0"
+opentelemetry-proto = "1.24.0"
+opentelemetry-sdk = ">=1.24.0,<1.25.0"
+requests = ">=2.7,<3.0"
+
+[[package]]
+name = "opentelemetry-proto"
+version = "1.24.0"
+description = "OpenTelemetry Python Proto"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+protobuf = ">=3.19,<5.0"
+
+[[package]]
+name = "opentelemetry-sdk"
+version = "1.24.0"
+description = "OpenTelemetry Python SDK"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+opentelemetry-api = "1.24.0"
+opentelemetry-semantic-conventions = "0.45b0"
+typing-extensions = ">=3.7.4"
+
+[[package]]
+name = "opentelemetry-semantic-conventions"
+version = "0.45b0"
+description = "OpenTelemetry Semantic Conventions"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[[package]]
+name = "ordered-set"
+version = "4.1.0"
+description = "An OrderedSet is a custom MutableSet that remembers its order, so that every"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+dev = ["pytest", "black", "mypy"]
+
+[[package]]
+name = "packaging"
+version = "24.0"
+description = "Core utilities for Python packages"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
+name = "pathspec"
+version = "0.12.1"
+description = "Utility library for gitignore style pattern matching of file paths."
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[[package]]
+name = "pendulum"
+version = "3.0.0"
+description = "Python datetimes made easy"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+"backports.zoneinfo" = {version = ">=0.2.1", markers = "python_version < \"3.9\""}
+importlib-resources = {version = ">=5.9.0", markers = "python_version < \"3.9\""}
+python-dateutil = ">=2.6"
+tzdata = ">=2020.1"
+
+[package.extras]
+test = ["time-machine (>=2.6.0)"]
+
+[[package]]
+name = "pkgutil-resolve-name"
+version = "1.3.10"
+description = "Resolve a name to an object."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[[package]]
+name = "platformdirs"
+version = "4.2.2"
+description = "A small Python package for determining appropriate platform-specific dirs, e.g. a `user data dir`."
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.extras]
+docs = ["furo (>=2023.9.10)", "proselint (>=0.13)", "sphinx-autodoc-typehints (>=1.25.2)", "sphinx (>=7.2.6)"]
+test = ["appdirs (==1.4.4)", "covdefaults (>=2.3)", "pytest-cov (>=4.1)", "pytest-mock (>=3.12)", "pytest (>=7.4.3)"]
+type = ["mypy (>=1.8)"]
+
+[[package]]
+name = "pluggy"
+version = "1.5.0"
+description = "plugin and hook calling mechanisms for python"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.extras]
+dev = ["pre-commit", "tox"]
+testing = ["pytest", "pytest-benchmark"]
+
+[[package]]
+name = "prison"
+version = "0.2.1"
+description = "Rison encoder/decoder"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+six = "*"
+
+[package.extras]
+dev = ["nose", "pipreqs", "twine"]
+
+[[package]]
+name = "protobuf"
+version = "4.25.3"
+description = ""
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[[package]]
+name = "psutil"
+version = "5.9.8"
+description = "Cross-platform lib for process and system monitoring in Python."
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*"
+
+[package.extras]
+test = ["enum34", "ipaddress", "mock", "pywin32", "wmi"]
+
+[[package]]
+name = "py4j"
+version = "0.10.9.7"
+description = "Enables Python programs to dynamically access arbitrary Java objects"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "pycparser"
+version = "2.22"
+description = "C parser in Python"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[[package]]
+name = "pygments"
+version = "2.18.0"
+description = "Pygments is a syntax highlighting package written in Python."
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.extras]
+windows-terminal = ["colorama (>=0.4.6)"]
+
+[[package]]
+name = "pyjwt"
+version = "2.8.0"
+description = "JSON Web Token implementation in Python"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+crypto = ["cryptography (>=3.4.0)"]
+dev = ["sphinx (>=4.5.0,<5.0.0)", "sphinx-rtd-theme", "zope.interface", "cryptography (>=3.4.0)", "pytest (>=6.0.0,<7.0.0)", "coverage[toml] (==5.0.4)", "pre-commit"]
+docs = ["sphinx (>=4.5.0,<5.0.0)", "sphinx-rtd-theme", "zope.interface"]
+tests = ["pytest (>=6.0.0,<7.0.0)", "coverage[toml] (==5.0.4)"]
+
+[[package]]
+name = "pyspark"
+version = "3.5.1"
+description = "Apache Spark Python API"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+py4j = "0.10.9.7"
+
+[package.extras]
+connect = ["googleapis-common-protos (>=1.56.4)", "grpcio-status (>=1.56.0)", "grpcio (>=1.56.0)", "numpy (>=1.15)", "pandas (>=1.0.5)", "pyarrow (>=4.0.0)"]
+ml = ["numpy (>=1.15)"]
+mllib = ["numpy (>=1.15)"]
+pandas_on_spark = ["numpy (>=1.15)", "pandas (>=1.0.5)", "pyarrow (>=4.0.0)"]
+sql = ["numpy (>=1.15)", "pandas (>=1.0.5)", "pyarrow (>=4.0.0)"]
+
+[[package]]
+name = "python-daemon"
+version = "3.0.1"
+description = "Library to implement a well-behaved Unix daemon process."
+category = "main"
+optional = false
+python-versions = ">=3"
+
+[package.dependencies]
+docutils = "*"
+lockfile = ">=0.10"
+
+[package.extras]
+devel = ["coverage", "docutils", "isort", "testscenarios (>=0.4)", "testtools", "twine"]
+test = ["coverage", "docutils", "testscenarios (>=0.4)", "testtools"]
+
+[[package]]
+name = "python-dateutil"
+version = "2.9.0.post0"
+description = "Extensions to the standard Python datetime module"
+category = "main"
+optional = false
+python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,>=2.7"
+
+[package.dependencies]
+six = ">=1.5"
+
+[[package]]
+name = "python-nvd3"
+version = "0.16.0"
+description = "Python NVD3 - Chart Library for d3.js"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+Jinja2 = ">=2.8"
+python-slugify = ">=1.2.5"
+
+[[package]]
+name = "python-slugify"
+version = "8.0.4"
+description = "A Python slugify application that also handles Unicode"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+text-unidecode = ">=1.3"
+
+[package.extras]
+unidecode = ["Unidecode (>=1.1.1)"]
+
+[[package]]
+name = "pytz"
+version = "2024.1"
+description = "World timezone definitions, modern and historical"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "pyyaml"
+version = "6.0.1"
+description = "YAML parser and emitter for Python"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[[package]]
+name = "referencing"
+version = "0.35.1"
+description = "JSON Referencing + Python"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+attrs = ">=22.2.0"
+rpds-py = ">=0.7.0"
+
+[[package]]
+name = "requests"
+version = "2.32.2"
+description = "Python HTTP for Humans."
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+certifi = ">=2017.4.17"
+charset-normalizer = ">=2,<4"
+idna = ">=2.5,<4"
+urllib3 = ">=1.21.1,<3"
+
+[package.extras]
+socks = ["PySocks (>=1.5.6,!=1.5.7)"]
+use-chardet-on-py3 = ["chardet (>=3.0.2,<6)"]
+
+[[package]]
+name = "requests-toolbelt"
+version = "1.0.0"
+description = "A utility belt for advanced users of python-requests"
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[package.dependencies]
+requests = ">=2.0.1,<3.0.0"
+
+[[package]]
+name = "rfc3339-validator"
+version = "0.1.4"
+description = "A pure python RFC3339 validator"
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+
+[package.dependencies]
+six = "*"
+
+[[package]]
+name = "rich"
+version = "13.7.1"
+description = "Render rich text, tables, progress bars, syntax highlighting, markdown and more to the terminal"
+category = "main"
+optional = false
+python-versions = ">=3.7.0"
+
+[package.dependencies]
+markdown-it-py = ">=2.2.0"
+pygments = ">=2.13.0,<3.0.0"
+typing-extensions = {version = ">=4.0.0,<5.0", markers = "python_version < \"3.9\""}
+
+[package.extras]
+jupyter = ["ipywidgets (>=7.5.1,<9)"]
+
+[[package]]
+name = "rich-argparse"
+version = "1.4.0"
+description = "Rich help formatters for argparse and optparse"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+rich = ">=11.0.0"
+
+[[package]]
+name = "rpds-py"
+version = "0.18.1"
+description = "Python bindings to Rust's persistent data structures (rpds)"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[[package]]
+name = "s3transfer"
+version = "0.10.1"
+description = "An Amazon S3 Transfer Manager"
+category = "main"
+optional = false
+python-versions = ">= 3.8"
+
+[package.dependencies]
+botocore = ">=1.33.2,<2.0a.0"
+
+[package.extras]
+crt = ["botocore[crt] (>=1.33.2,<2.0a.0)"]
+
+[[package]]
+name = "setproctitle"
+version = "1.3.3"
+description = "A Python module to customize the process title"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+test = ["pytest"]
+
+[[package]]
+name = "six"
+version = "1.16.0"
+description = "Python 2 and 3 compatibility utilities"
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
+
+[[package]]
+name = "sniffio"
+version = "1.3.1"
+description = "Sniff out which async library your code is running under"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
+name = "sqlalchemy"
+version = "1.4.52"
+description = "Database Abstraction Library"
+category = "main"
+optional = false
+python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,>=2.7"
+
+[package.dependencies]
+greenlet = {version = "!=0.4.17", markers = "python_version >= \"3\" and (platform_machine == \"aarch64\" or platform_machine == \"ppc64le\" or platform_machine == \"x86_64\" or platform_machine == \"amd64\" or platform_machine == \"AMD64\" or platform_machine == \"win32\" or platform_machine == \"WIN32\")"}
+
+[package.extras]
+asyncio = ["greenlet (!=0.4.17)"]
+mypy = ["mypy (>=0.910)", "sqlalchemy2-stubs"]
+mssql = ["pyodbc"]
+mssql-pymssql = ["pymssql"]
+mssql-pyodbc = ["pyodbc"]
+mysql = ["mysqlclient (>=1.4.0,<2)", "mysqlclient (>=1.4.0)"]
+mysql-connector = ["mysql-connector-python"]
+mariadb-connector = ["mariadb (>=1.0.1,!=1.1.2)"]
+oracle = ["cx_oracle (>=7,<8)", "cx_oracle (>=7)"]
+postgresql = ["psycopg2 (>=2.7)"]
+postgresql-pg8000 = ["pg8000 (>=1.16.6,!=1.29.0)"]
+postgresql-asyncpg = ["greenlet (!=0.4.17)", "asyncpg"]
+postgresql-psycopg2binary = ["psycopg2-binary"]
+postgresql-psycopg2cffi = ["psycopg2cffi"]
+pymysql = ["pymysql", "pymysql (<1)"]
+aiomysql = ["greenlet (!=0.4.17)", "aiomysql (>=0.2.0)"]
+asyncmy = ["greenlet (!=0.4.17)", "asyncmy (>=0.2.3,!=0.2.4)"]
+aiosqlite = ["greenlet (!=0.4.17)", "aiosqlite", "typing_extensions (!=3.10.0.1)"]
+sqlcipher = ["sqlcipher3-binary"]
+
+[[package]]
+name = "sqlalchemy-jsonfield"
+version = "1.0.2"
+description = "SQLALchemy JSONField implementation for storing dicts at SQL"
+category = "main"
+optional = false
+python-versions = ">=3.7.0"
+
+[package.dependencies]
+sqlalchemy = "*"
+
+[[package]]
+name = "sqlalchemy-utils"
+version = "0.41.2"
+description = "Various utility functions for SQLAlchemy."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+SQLAlchemy = ">=1.3"
+
+[package.extras]
+arrow = ["arrow (>=0.3.4)"]
+babel = ["Babel (>=1.3)"]
+color = ["colour (>=0.0.4)"]
+encrypted = ["cryptography (>=0.6)"]
+intervals = ["intervals (>=0.7.1)"]
+password = ["passlib (>=1.6,<2.0)"]
+pendulum = ["pendulum (>=2.0.5)"]
+phone = ["phonenumbers (>=5.9.2)"]
+test = ["pytest (==7.4.4)", "Pygments (>=1.2)", "Jinja2 (>=2.3)", "docutils (>=0.10)", "flexmock (>=0.9.7)", "psycopg (>=3.1.8)", "psycopg2 (>=2.5.1)", "psycopg2cffi (>=2.8.1)", "pg8000 (>=1.12.4)", "pytz (>=2014.2)", "python-dateutil (>=2.6)", "pymysql", "flake8 (>=2.4.0)", "isort (>=4.2.2)", "pyodbc", "backports.zoneinfo"]
+test-all = ["Babel (>=1.3)", "Jinja2 (>=2.3)", "Pygments (>=1.2)", "arrow (>=0.3.4)", "colour (>=0.0.4)", "cryptography (>=0.6)", "docutils (>=0.10)", "flake8 (>=2.4.0)", "flexmock (>=0.9.7)", "furl (>=0.4.1)", "intervals (>=0.7.1)", "isort (>=4.2.2)", "passlib (>=1.6,<2.0)", "pendulum (>=2.0.5)", "pg8000 (>=1.12.4)", "phonenumbers (>=5.9.2)", "psycopg2 (>=2.5.1)", "psycopg2cffi (>=2.8.1)", "psycopg (>=3.1.8)", "pymysql", "pyodbc", "pytest (==7.4.4)", "python-dateutil", "python-dateutil (>=2.6)", "pytz (>=2014.2)"]
+test_all = ["backports.zoneinfo"]
+timezone = ["python-dateutil"]
+url = ["furl (>=0.4.1)"]
+
+[[package]]
+name = "sqlparse"
+version = "0.5.0"
+description = "A non-validating SQL parser."
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.extras]
+dev = ["build", "hatch"]
+doc = ["sphinx"]
+
+[[package]]
+name = "tabulate"
+version = "0.9.0"
+description = "Pretty-print tabular data"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+widechars = ["wcwidth"]
+
+[[package]]
+name = "tenacity"
+version = "8.3.0"
+description = "Retry code until it succeeds"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.extras]
+doc = ["reno", "sphinx"]
+test = ["pytest", "tornado (>=4.5)", "typeguard"]
+
+[[package]]
+name = "termcolor"
+version = "2.4.0"
+description = "ANSI color formatting for output in terminal"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.extras]
+tests = ["pytest", "pytest-cov"]
+
+[[package]]
+name = "text-unidecode"
+version = "1.3"
+description = "The most basic Text::Unidecode port"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "tomli"
+version = "2.0.1"
+description = "A lil' TOML parser"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
+name = "typing-extensions"
+version = "4.12.0"
+description = "Backported and Experimental Type Hints for Python 3.8+"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[[package]]
+name = "tzdata"
+version = "2024.1"
+description = "Provider of IANA time zone data"
+category = "main"
+optional = false
+python-versions = ">=2"
+
+[[package]]
+name = "uc-micro-py"
+version = "1.0.3"
+description = "Micro subset of unicode data files for linkify-it-py projects."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+test = ["pytest", "coverage", "pytest-cov"]
+
+[[package]]
+name = "unicodecsv"
+version = "0.14.1"
+description = "Python2's stdlib csv module is nice, but it doesn't support unicode. This module is a drop-in replacement which *does*."
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "universal-pathlib"
+version = "0.2.2"
+description = "pathlib api extended to use fsspec backends"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+fsspec = ">=2022.1.0"
+
+[package.extras]
+dev = ["pytest (==8.0.0)", "pytest-sugar (==0.9.7)", "pytest-cov (==4.1.0)", "pytest-mock (==3.12.0)", "pylint (==2.17.4)", "mypy (==1.8.0)", "packaging", "adlfs", "aiohttp", "requests", "gcsfs", "s3fs", "moto[server,s3] (<5)", "webdav4", "wsgidav", "cheroot", "pydantic", "pydantic-settings"]
+tests = ["pytest (==8.0.0)", "pytest-sugar (==0.9.7)", "pytest-cov (==4.1.0)", "pytest-mock (==3.12.0)", "pylint (==2.17.4)", "mypy (==1.8.0)", "packaging"]
+
+[[package]]
+name = "urllib3"
+version = "1.26.18"
+description = "HTTP library with thread-safe connection pooling, file post, and more."
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*"
+
+[package.extras]
+brotli = ["brotlicffi (>=0.8.0)", "brotli (==1.0.9)", "brotlipy (>=0.6.0)", "brotli (>=1.0.9)"]
+secure = ["pyOpenSSL (>=0.14)", "cryptography (>=1.3.4)", "idna (>=2.0.0)", "certifi", "urllib3-secure-extra", "ipaddress"]
+socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
+
+[[package]]
+name = "urllib3"
+version = "2.2.1"
+description = "HTTP library with thread-safe connection pooling, file post, and more."
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.extras]
+brotli = ["brotli (>=1.0.9)", "brotlicffi (>=0.8.0)"]
+h2 = ["h2 (>=4,<5)"]
+socks = ["pysocks (>=1.5.6,!=1.5.7,<2.0)"]
+zstd = ["zstandard (>=0.18.0)"]
+
+[[package]]
+name = "werkzeug"
+version = "2.2.3"
+description = "The comprehensive WSGI web application library."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+MarkupSafe = ">=2.1.1"
+
+[package.extras]
+watchdog = ["watchdog"]
+
+[[package]]
+name = "wirerope"
+version = "0.4.7"
+description = "'Turn functions and methods into fully controllable objects'"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+six = ">=1.11.0"
+
+[package.extras]
+doc = ["sphinx"]
+test = ["pytest (>=4.6.7)", "pytest-cov (>=2.6.1)"]
+
+[[package]]
+name = "wrapt"
+version = "1.16.0"
+description = "Module for decorators, wrappers and monkey patching."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[[package]]
+name = "wtforms"
+version = "3.1.2"
+description = "Form validation and rendering for Python web development."
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+markupsafe = "*"
+
+[package.extras]
+email = ["email-validator"]
+
+[[package]]
+name = "yarl"
+version = "1.9.4"
+description = "Yet another URL library"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+idna = ">=2.0"
+multidict = ">=4.0"
+
+[[package]]
+name = "zipp"
+version = "3.19.0"
+description = "Backport of pathlib-compatible object wrapper for zip files"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.extras]
+docs = ["sphinx (>=3.5)", "jaraco.packaging (>=9.3)", "rst.linker (>=1.9)", "furo", "sphinx-lint", "jaraco.tidelift (>=1.4)"]
+testing = ["pytest (>=6,<8.1.0 || >=8.2.0)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-mypy", "pytest-enabler (>=2.2)", "pytest-ruff (>=0.2.1)", "jaraco.itertools", "jaraco.functools", "more-itertools", "big-o", "pytest-ignore-flaky", "jaraco.test"]
+
+[metadata]
+lock-version = "1.1"
+python-versions = ">=3.8,<3.13"
+content-hash = "55aea3cc616f0a9d588c50c166fa7eb119b73899171f6a64ac896e7b0e26bc56"
+
+[metadata.files]
+aiohttp = []
+aiosignal = []
+alembic = []
+anyio = []
+apache-airflow = []
+apache-airflow-providers-common-io = []
+apache-airflow-providers-common-sql = []
+apache-airflow-providers-fab = []
+apache-airflow-providers-ftp = []
+apache-airflow-providers-http = []
+apache-airflow-providers-imap = []
+apache-airflow-providers-smtp = []
+apache-airflow-providers-sqlite = []
+apispec = []
+argcomplete = []
+asgiref = []
+async-timeout = []
+attrs = []
+babel = []
+"backports.zoneinfo" = []
+black = []
+blinker = []
+boto3 = []
+botocore = []
+cachelib = []
+certifi = []
+cffi = []
+charset-normalizer = []
+click = []
+clickclick = []
+colorama = []
+colorlog = []
+configupdater = []
+connexion = []
+cron-descriptor = []
+croniter = []
+cryptography = []
+deprecated = []
+dill = []
+dnspython = []
+docutils = []
+email-validator = []
+exceptiongroup = []
+flask = []
+flask-appbuilder = []
+flask-babel = []
+flask-caching = []
+flask-jwt-extended = []
+flask-limiter = []
+flask-login = []
+flask-session = []
+flask-sqlalchemy = []
+flask-wtf = []
+frozenlist = []
+fsspec = []
+google-re2 = []
+googleapis-common-protos = []
+greenlet = []
+grpcio = []
+gunicorn = []
+h11 = []
+httpcore = []
+httpx = []
+idna = []
+importlib-metadata = []
+importlib-resources = []
+inflection = []
+itsdangerous = []
+jinja2 = []
+jmespath = []
+jsonschema = []
+jsonschema-specifications = []
+lazy-object-proxy = []
+limits = []
+linkify-it-py = []
+lockfile = []
+mako = []
+markdown-it-py = []
+markupsafe = []
+marshmallow = []
+marshmallow-oneofschema = []
+marshmallow-sqlalchemy = []
+mdit-py-plugins = []
+mdurl = []
+methodtools = []
+more-itertools = []
+multidict = []
+mypy-extensions = []
+opentelemetry-api = []
+opentelemetry-exporter-otlp = []
+opentelemetry-exporter-otlp-proto-common = []
+opentelemetry-exporter-otlp-proto-grpc = []
+opentelemetry-exporter-otlp-proto-http = []
+opentelemetry-proto = []
+opentelemetry-sdk = []
+opentelemetry-semantic-conventions = []
+ordered-set = []
+packaging = []
+pathspec = []
+pendulum = []
+pkgutil-resolve-name = []
+platformdirs = []
+pluggy = []
+prison = []
+protobuf = []
+psutil = []
+py4j = []
+pycparser = []
+pygments = []
+pyjwt = []
+pyspark = []
+python-daemon = []
+python-dateutil = []
+python-nvd3 = []
+python-slugify = []
+pytz = []
+pyyaml = []
+referencing = []
+requests = []
+requests-toolbelt = []
+rfc3339-validator = []
+rich = []
+rich-argparse = []
+rpds-py = []
+s3transfer = []
+setproctitle = []
+six = []
+sniffio = []
+sqlalchemy = []
+sqlalchemy-jsonfield = []
+sqlalchemy-utils = []
+sqlparse = []
+tabulate = []
+tenacity = []
+termcolor = []
+text-unidecode = []
+tomli = []
+typing-extensions = []
+tzdata = []
+uc-micro-py = []
+unicodecsv = []
+universal-pathlib = []
+urllib3 = []
+werkzeug = []
+wirerope = []
+wrapt = []
+wtforms = []
+yarl = []
+zipp = []

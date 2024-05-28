@@ -1,0 +1,91 @@
+version: '3.7'
+
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  webserver:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: my-webserver-image:latest  # Custom image name and tag
+    environment:
+      AIRFLOW__CORE__LOAD_EXAMPLES: ${AIRFLOW__CORE__LOAD_EXAMPLES}
+      AIRFLOW__CORE__EXECUTOR: ${AIRFLOW__CORE__EXECUTOR}
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: ${AIRFLOW__DATABASE__SQL_ALCHEMY_CONN}
+      AIRFLOW__CORE__FERNET_KEY: ${AIRFLOW__CORE__FERNET_KEY}
+      AIRFLOW__WEBSERVER__AUTHENTICATE: ${AIRFLOW__WEBSERVER__AUTHENTICATE}
+      AIRFLOW__WEBSERVER__AUTH_BACKEND: ${AIRFLOW__WEBSERVER__AUTH_BACKEND}
+      AIRFLOW_ADMIN_USER: ${AIRFLOW_ADMIN_USER}
+      AIRFLOW_ADMIN_PASSWORD: ${AIRFLOW_ADMIN_PASSWORD}
+      # SOME_API_KEY: ${SOME_API_KEY}
+      # SOME_API_SECRET: ${SOME_API_SECRET}
+      # SMTP_HOST: ${SMTP_HOST}
+      # SMTP_PORT: ${SMTP_PORT}
+      # SMTP_USER: ${SMTP_USER}
+      # SMTP_PASSWORD: ${SMTP_PASSWORD}
+    depends_on:
+      - postgres
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./spark/spark-defaults.conf:/opt/airflow/spark-defaults.conf
+    command: webserver
+
+  scheduler:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: my-scheduler-image:latest  # Custom image name and tag
+    environment:
+      AIRFLOW__CORE__LOAD_EXAMPLES: ${AIRFLOW__CORE__LOAD_EXAMPLES}
+      AIRFLOW__CORE__EXECUTOR: ${AIRFLOW__CORE__EXECUTOR}
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: ${AIRFLOW__DATABASE__SQL_ALCHEMY_CONN}
+      AIRFLOW__CORE__FERNET_KEY: ${AIRFLOW__CORE__FERNET_KEY}
+      AIRFLOW__WEBSERVER__AUTHENTICATE: ${AIRFLOW__WEBSERVER__AUTHENTICATE}
+      AIRFLOW__WEBSERVER__AUTH_BACKEND: ${AIRFLOW__WEBSERVER__AUTH_BACKEND}
+    depends_on:
+      - postgres
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./spark/spark-defaults.conf:/opt/airflow/spark-defaults.conf
+    command: scheduler
+
+  airflow-init:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: my-airflow-init-image:latest  # Custom image name and tag for airflow-init
+    environment:
+      AIRFLOW__CORE__LOAD_EXAMPLES: ${AIRFLOW__CORE__LOAD_EXAMPLES}
+      AIRFLOW__CORE__EXECUTOR: ${AIRFLOW__CORE__EXECUTOR}
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: ${AIRFLOW__DATABASE__SQL_ALCHEMY_CONN}
+      AIRFLOW__CORE__FERNET_KEY: ${AIRFLOW__CORE__FERNET_KEY}
+      AIRFLOW__WEBSERVER__AUTHENTICATE: ${AIRFLOW__WEBSERVER__AUTHENTICATE}
+      AIRFLOW__WEBSERVER__AUTH_BACKEND: ${AIRFLOW__WEBSERVER__AUTH_BACKEND}
+    depends_on:
+      - postgres
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./spark/spark-defaults.conf:/opt/airflow/spark-defaults.conf
+    command: airflow db init
+
+  spark:
+    image: bitnami/spark:3.1.2
+    environment:
+      SPARK_MODE: 'master'
+    ports:
+      - "7077:7077"
+      - "8081:8081"
+    volumes:
+      - ./spark/spark-defaults.conf:/opt/bitnami/spark/conf/spark-defaults.conf
+
+volumes:
+  postgres_data:
