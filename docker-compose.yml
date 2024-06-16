@@ -24,6 +24,7 @@ services:
       AIRFLOW__WEBSERVER__AUTH_BACKEND: ${AIRFLOW__WEBSERVER__AUTH_BACKEND}
       AIRFLOW_ADMIN_USER: ${AIRFLOW_ADMIN_USER}
       AIRFLOW_ADMIN_PASSWORD: ${AIRFLOW_ADMIN_PASSWORD}
+      PYTHONPATH: /home/deb-gama/personal_projects/Data_Pipeline
       # SOME_API_KEY: ${SOME_API_KEY}
       # SOME_API_SECRET: ${SOME_API_SECRET}
       # SMTP_HOST: ${SMTP_HOST}
@@ -52,6 +53,7 @@ services:
       AIRFLOW__CORE__FERNET_KEY: ${AIRFLOW__CORE__FERNET_KEY}
       AIRFLOW__WEBSERVER__AUTHENTICATE: ${AIRFLOW__WEBSERVER__AUTHENTICATE}
       AIRFLOW__WEBSERVER__AUTH_BACKEND: ${AIRFLOW__WEBSERVER__AUTH_BACKEND}
+      PYTHONPATH: /home/deb-gama/personal_projects/Data_Pipeline
     depends_on:
       - postgres
     volumes:
